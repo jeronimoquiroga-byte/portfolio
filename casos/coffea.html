@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; form-action 'self'; base-uri 'self'">
+  <title>Coffea · Caso de estudio · Jerónimo Quiroga</title>
+  <meta name="description" content="Caso de estudio de Coffea: la landing de una cafetería de especialidad hecha solo con HTML y CSS, con el código ordenado en capas y componentes BEM.">
+  <meta name="theme-color" content="#f4f4ef">
+  <link rel="canonical" href="https://jeronimo-quiroga.netlify.app/casos/coffea.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:url" content="https://jeronimo-quiroga.netlify.app/casos/coffea.html">
+  <meta property="og:title" content="Coffea · Caso de estudio de Jerónimo Quiroga">
+  <meta property="og:description" content="Carruseles, favoritos y menú sin una línea de JavaScript.">
+  <meta property="og:image" content="https://jeronimo-quiroga.netlify.app/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portfolio de Jerónimo Quiroga: Front-end y UI">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <div class="contenedor cabecera__barra">
+      <a class="logo" href="../index.html">
+        <svg class="logo__marca" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" fill="#2338c2"/><path d="M1 9h4M1 31h4M35 9h4M35 31h4M9 1v4M31 1v4M9 35v4M31 35v4" stroke="#d7f25c" stroke-width="2"/><text x="20" y="26.5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" fill="#fff">JQ</text></svg>
+        <span class="logo__nombre">Jerónimo Quiroga<span class="logo__rol">Front-end y UI</span></span>
+      </a>
+      <a class="boton boton--chico" href="../index.html#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="caso-hero" aria-labelledby="titulo-caso">
+      <div class="contenedor caso-hero__grilla">
+        <a class="volver" href="../index.html#proyectos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Volver a proyectos</a>
+        <p class="kicker">Caso de estudio · 2026</p>
+        <h1 class="caso-hero__titulo" id="titulo-caso">Coffea</h1>
+        <p class="caso-hero__bajada">La landing de una cafetería de especialidad, con carruseles, favoritos y menú resueltos sin una línea de JavaScript.</p>
+        <dl class="ficha">
+          <div><dt>Contexto</dt><dd>Diseño UX-UI · Landing</dd></div>
+          <div><dt>Mi rol</dt><dd>Maquetación</dd></div>
+          <div><dt>Stack</dt><dd>HTML5 · CSS3 · sin JS</dd></div>
+          <div><dt>Código</dt><dd><a href="https://github.com/jeronimoquiroga-byte/Coffea-landing" target="_blank" rel="noopener noreferrer">GitHub<span class="visualmente-oculto"> (se abre en otra pestaña)</span></a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="t-problema">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">01</span>
+          <h2 class="encabezado__titulo" id="t-problema">Problema</h2>
+        </header>
+        <div class="caso">
+          <p>Coffea necesitaba una página que abra el apetito: mostrar sus cafés y postres, invitar a pedir y juntar suscriptores para el newsletter.</p>
+          <p>La restricción que me puse fue no usar JavaScript. Una landing así suele cargar librerías para carruseles y botones de favorito, y yo quería ver hasta dónde llegaba el CSS solo.</p>
+          <h3>Qué tenía que resolver</h3>
+          <ul>
+            <li>Ocho secciones: portada, categorías, cafés, postres, promo, testimonios, newsletter y pie.</li>
+            <li>Carruseles que se puedan usar con el dedo, con flechas y con el teclado.</li>
+            <li>Un botón de favorito en cada producto que recuerde su estado.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--alterna" aria-labelledby="t-proceso">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">02</span>
+          <h2 class="encabezado__titulo" id="t-proceso">Proceso</h2>
+        </header>
+        <div class="caso">
+          <h3>Primero los tokens</h3>
+          <p>Antes de maquetar definí la paleta como variables con nombres de café: <code>--color-espresso</code>, <code>--color-maroon</code>, <code>--color-sand</code>. Si cambia un color, cambia en un solo lugar.</p>
+          <h3>El CSS ordenado en capas</h3>
+          <p>El archivo principal declara el orden de las capas: <code>@layer tokens, base, layout, components, utilities</code>. Así una utilidad siempre le gana a un componente sin pelear con la especificidad.</p>
+          <ol class="pasos">
+            <li><span><b>tokens:</b> colores, tipografías y espacios.</span></li>
+            <li><span><b>base:</b> reseteo y estilos de etiquetas.</span></li>
+            <li><span><b>layout:</b> contenedor y grillas.</span></li>
+            <li><span><b>components:</b> 9 archivos, uno por componente, con nombres BEM (<code>.product-card__fav-btn</code>).</span></li>
+            <li><span><b>utilities:</b> clases chicas, como <code>.visually-hidden</code>.</span></li>
+          </ol>
+          <h3>Interacción sin JavaScript</h3>
+          <ul>
+            <li><b>Carrusel:</b> <code>scroll-snap-type</code> en la pista y <code>scroll-snap-align</code> en cada tarjeta. Las flechas son enlaces a la tarjeta de destino.</li>
+            <li><b>Favorito:</b> un checkbox oculto con <code>.visually-hidden</code> y el selector <code>:checked + .product-card__fav-btn</code> que pinta el corazón.</li>
+            <li><b>Accesibilidad:</b> enlace para saltar al contenido, <code>aria-label</code> en los botones de ícono y un solo <code>h1</code>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="t-solucion">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">03</span>
+          <h2 class="encabezado__titulo" id="t-solucion">Solución</h2>
+        </header>
+        <div class="figuras">
+          <figure class="figura">
+            <img src="../assets/img/proyectos/coffea-960.webp" width="960" height="600" loading="lazy" decoding="async" alt="Portada de Coffea: “We serve the richest coffee in the city!” en tipografía serif blanca, sobre granos de café y una taza con arte latte.">
+            <figcaption>Portada en desktop.</figcaption>
+          </figure>
+          <figure class="figura">
+            <img src="../assets/img/proyectos/coffea-mobile.webp" width="375" height="800" loading="lazy" decoding="async" alt="La portada de Coffea en un celular, con el título encima de la foto.">
+            <figcaption>Mobile.</figcaption>
+          </figure>
+        </div>
+        <div class="grilla grilla--2 mt-6">
+          <figure class="figura">
+            <img src="../assets/img/proyectos/coffea-menu-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Carrusel “Our special coffee”: tarjetas con foto, nombre, descripción, precio, botón Order Now, corazón de favorito y flechas a los costados.">
+            <figcaption>Carrusel de cafés con scroll-snap y favoritos.</figcaption>
+          </figure>
+          <figure class="figura">
+            <img src="../assets/img/proyectos/coffea-promo-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Carrusel “Our special dessert”: el mismo componente de tarjeta con fotos de postres y cafés.">
+            <figcaption>El mismo componente, reutilizado para los postres.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--alterna" aria-labelledby="t-resultado">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">04</span>
+          <h2 class="encabezado__titulo" id="t-resultado">Resultado y aprendizajes</h2>
+        </header>
+        <div class="caso">
+          <div class="datos">
+            <div class="dato"><b>0</b><span>líneas de JavaScript</span></div>
+            <div class="dato"><b>9</b><span>componentes en archivos separados</span></div>
+            <div class="dato"><b>5</b><span>capas de CSS</span></div>
+          </div>
+          <h3>Qué salió bien</h3>
+          <ul>
+            <li>Con un componente por archivo, cada cambio tocó un solo lugar. La tarjeta de producto se reutilizó tal cual para los postres.</li>
+            <li>El CSS resolvió carruseles y favoritos sin cargar ninguna librería.</li>
+          </ul>
+          <h3>Qué aprendí</h3>
+          <ul>
+            <li>Sin JavaScript, el favorito no sobrevive a recargar la página. Para guardarlo de verdad haría falta <code>localStorage</code>: CSS solo no alcanza para todo.</li>
+            <li>El texto de prueba (lorem ipsum) y los precios genéricos hacen que el diseño se vea terminado antes de que lo esté. La próxima vez arranco con contenido real.</li>
+          </ul>
+          <a class="siguiente mt-6" href="cubri-seguros.html"><span class="kicker">Siguiente caso</span><strong>Cubrí Seguros →</strong><span>Un cotizador de seguros en 4 pasos.</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__grilla">
+      <nav class="pie__nav" aria-label="Secciones (pie)">
+        <ul role="list">
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#proyectos">Proyectos</a></li>
+          <li><a href="../index.html#experiencia">Experiencia</a></li>
+          <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="pie__legal">© 2026 Jerónimo Quiroga. Hecho con HTML, CSS y un poco de JavaScript, sin frameworks.</p>
+    </div>
+  </footer>
+</body>
+</html>
