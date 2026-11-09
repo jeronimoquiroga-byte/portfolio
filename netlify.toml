@@ -3,7 +3,8 @@
 [build]
   publish = "."
 
-# La Content Security Policy va en un <meta> de cada página, así no bloquea los HTML de docs/.
+# Sin Content Security Policy: en el plan gratuito Netlify inyecta el badge "Powered by Netlify"
+# con código inline, y una CSP estricta lo bloquea y deja errores en la consola.
 [[headers]]
   for = "/*"
   [headers.values]

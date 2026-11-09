@@ -94,7 +94,7 @@ python -m http.server 8000
 ## Bonus
 
 - Formulario de contacto funcional con Netlify Forms y campo anti-spam.
-- Headers de seguridad en `netlify.toml` y Content Security Policy en cada página.
+- Headers de seguridad en `netlify.toml`: `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy` y `Permissions-Policy`. No lleva Content Security Policy porque el plan gratuito de Netlify inyecta el badge "Powered by Netlify" con código inline, y una CSP estricta lo bloquea.
 - Página 404 personalizada.
 - Dos casos de estudio con navegación entre ellos.
 - Microinteracciones: tarjetas que se levantan con sombra de plano, subrayado animado en el menú y sección actual marcada.
