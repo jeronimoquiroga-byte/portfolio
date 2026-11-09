@@ -1,0 +1,18 @@
+# Deploy en Netlify: publica la carpeta raíz en cada push a main.
+# No hay paso de build: el sitio es HTML y CSS listos para servir.
+[build]
+  publish = "."
+
+# La Content Security Policy va en un <meta> de cada página, así no bloquea los HTML de docs/.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
