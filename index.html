@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; form-action 'self'; base-uri 'self'">
+  <title>Jerónimo Quiroga · Front-end y UI · Portfolio</title>
+  <meta name="description" content="Portfolio de Jerónimo Quiroga, estudiante de Sistemas en la UADER. Maqueta interfaces con HTML semántico, CSS ordenado y JavaScript. Busca pasantía o puesto trainee front-end.">
+  <meta name="theme-color" content="#f4f4ef">
+  <meta name="author" content="Jerónimo Quiroga">
+  <link rel="canonical" href="https://jeronimo-quiroga.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:url" content="https://jeronimo-quiroga.netlify.app/">
+  <meta property="og:title" content="Jerónimo Quiroga · Front-end y UI">
+  <meta property="og:description" content="Estudiante de Sistemas que maqueta interfaces claras y accesibles. Proyectos, skills y contacto.">
+  <meta property="og:image" content="https://jeronimo-quiroga.netlify.app/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portfolio de Jerónimo Quiroga: Front-end y UI">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/public-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js" defer></script>
+  <noscript><link rel="stylesheet" href="css/sin-js.css"></noscript>
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="contenedor cabecera__barra">
+      <a class="logo" href="#inicio">
+        <svg class="logo__marca" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" fill="#2338c2"/><path d="M1 9h4M1 31h4M35 9h4M35 31h4M9 1v4M31 1v4M9 35v4M31 35v4" stroke="#d7f25c" stroke-width="2"/><text x="20" y="26.5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" fill="#fff">JQ</text></svg>
+        <span class="logo__nombre">Jerónimo Quiroga<span class="logo__rol">Front-end y UI</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+        <svg class="nav-toggle__icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path class="abrir" d="M3 6h18M3 12h18M3 18h18"/><path class="cerrar" d="M5 5l14 14M19 5L5 19"/></svg>
+        Menú
+      </button>
+      <nav class="nav" id="menu" aria-label="Secciones">
+        <ul class="nav__lista" role="list">
+          <li><a class="nav__link" href="#skills"><span class="nav__num">01</span>Skills</a></li>
+          <li><a class="nav__link" href="#proyectos"><span class="nav__num">02</span>Proyectos</a></li>
+          <li><a class="nav__link" href="#experiencia"><span class="nav__num">03</span>Experiencia</a></li>
+          <li><a class="nav__link" href="#sobre-mi"><span class="nav__num">04</span>Sobre mí</a></li>
+          <li><a class="nav__link" href="#contacto"><span class="nav__num">05</span>Contacto</a></li>
+        </ul>
+        <div class="nav__acciones">
+          <a class="icono-link" href="https://github.com/jeronimoquiroga-byte" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Jerónimo (se abre en otra pestaña)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+          </a>
+          <a class="boton boton--chico" href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+      <div class="contenedor hero__grilla">
+        <div class="hero__texto">
+          <p class="insignia"><span class="insignia__punto" aria-hidden="true"></span>Disponible para pasantía o trainee front-end</p>
+          <h1 class="hero__titulo" id="titulo-hero">Jerónimo Quiroga</h1>
+          <p class="hero__rol">Estudiante de Sistemas · Front-end y UI</p>
+          <p class="hero__propuesta">Maqueto interfaces con HTML semántico y CSS ordenado por capas, que se leen bien en cualquier pantalla y se pueden usar con el teclado.</p>
+          <div class="hero__acciones">
+            <a class="boton" href="#proyectos">Ver proyectos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+            </a>
+            <a class="boton boton--secundario" href="#contacto">Escribime</a>
+          </div>
+          <p class="hero__ubicacion">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            Concepción del Uruguay, Entre Ríos · GMT−3 · Presencial o remoto
+          </p>
+        </div>
+
+        <aside class="rotulo" aria-labelledby="titulo-rotulo">
+          <h2 class="rotulo__titulo" id="titulo-rotulo">En 30 segundos <span>Hoja 01</span></h2>
+          <dl class="rotulo__datos">
+            <div class="rotulo__dato"><dt>Hace</dt><dd>Maquetación y UI</dd></div>
+            <div class="rotulo__dato"><dt>Busca</dt><dd>Pasantía o trainee</dd></div>
+            <div class="rotulo__dato rotulo__dato--ancho"><dt>Stack</dt><dd>HTML · CSS · JavaScript · Tailwind · Figma</dd></div>
+            <div class="rotulo__dato"><dt>Estudia</dt><dd>Lic. en Sistemas, UADER</dd></div>
+            <div class="rotulo__dato"><dt>Último proyecto</dt><dd><a href="casos/cubri-seguros.html">Cubrí Seguros</a></dd></div>
+            <div class="rotulo__dato rotulo__dato--ancho"><dt>Contacto</dt><dd><a href="mailto:jeronimoquiroga420@gmail.com">jeronimoquiroga420@gmail.com</a></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- MÉTRICAS -->
+    <section class="seccion seccion--compacta" aria-labelledby="titulo-logros" id="logros">
+      <div class="contenedor">
+        <h2 class="visualmente-oculto" id="titulo-logros">Logros en números</h2>
+        <ul class="metricas" role="list">
+          <li class="metrica"><span class="metrica__numero">19</span><span class="metrica__etiqueta">ejercicios de maquetación entregados en 2026</span></li>
+          <li class="metrica"><span class="metrica__numero">3</span><span class="metrica__etiqueta">proyectos web completos, con el código en GitHub</span></li>
+          <li class="metrica"><span class="metrica__numero">0</span><span class="metrica__etiqueta">líneas de JavaScript en Coffea: todo con CSS</span></li>
+          <li class="metrica"><span class="metrica__numero">6</span><span class="metrica__etiqueta">estructuras de datos programadas en Python</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="seccion seccion--alterna mt-7" id="skills" aria-labelledby="titulo-skills">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">01</span>
+          <h2 class="encabezado__titulo" id="titulo-skills">Skills</h2>
+          <p class="encabezado__bajada">Cada skill dice en qué proyecto se puede ver. Así no hay que creerme: se puede comprobar.</p>
+        </header>
+        <div class="grilla grilla--4">
+          <article class="tarjeta skill">
+            <svg class="skill__icono" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M14 12l-8 8 8 8M26 12l8 8-8 8M22 8l-4 24"/></svg>
+            <h3 class="tarjeta__titulo">Maquetación</h3>
+            <p class="tarjeta__texto">HTML semántico, encabezados en orden, formularios con validación y accesibilidad pensada desde el principio.</p>
+            <ul class="etiquetas" role="list"><li class="etiqueta">HTML5</li><li class="etiqueta">WCAG 2.2</li><li class="etiqueta">Formularios</li><li class="etiqueta">SEO básico</li></ul>
+            <p class="tarjeta__pie">Visto en <a href="casos/cubri-seguros.html">Cubrí Seguros</a></p>
+          </article>
+          <article class="tarjeta skill">
+            <svg class="skill__icono" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="6" y="6" width="28" height="28"/><path d="M6 16h28M16 16v18"/></svg>
+            <h3 class="tarjeta__titulo">CSS y UI</h3>
+            <p class="tarjeta__texto">Layouts con Grid y Flexbox, mobile-first, design tokens y CSS organizado por capas con nombres BEM.</p>
+            <ul class="etiquetas" role="list"><li class="etiqueta">CSS3</li><li class="etiqueta">@layer</li><li class="etiqueta">BEM</li><li class="etiqueta">Tailwind v4</li><li class="etiqueta">Responsive</li></ul>
+            <p class="tarjeta__pie">Visto en <a href="casos/coffea.html">Coffea</a></p>
+          </article>
+          <article class="tarjeta skill">
+            <svg class="skill__icono" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="10" cy="20" r="4"/><circle cx="30" cy="10" r="4"/><circle cx="30" cy="30" r="4"/><path d="M14 18l12-6M14 22l12 6"/></svg>
+            <h3 class="tarjeta__titulo">JavaScript</h3>
+            <p class="tarjeta__texto">Módulos ES, estado centralizado, validaciones y flujos de varios pasos sin frameworks.</p>
+            <ul class="etiquetas" role="list"><li class="etiqueta">ES Modules</li><li class="etiqueta">DOM</li><li class="etiqueta">fetch + JSON</li><li class="etiqueta">Promesas</li></ul>
+            <p class="tarjeta__pie">Visto en <a href="casos/cubri-seguros.html">Cubrí Seguros</a></p>
+          </article>
+          <article class="tarjeta skill">
+            <svg class="skill__icono" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M8 32V8h10l4 4h10v20z"/><path d="M14 22h12M14 27h8"/></svg>
+            <h3 class="tarjeta__titulo">Herramientas y bases</h3>
+            <p class="tarjeta__texto">Diseño en Figma, versionado con Git y deploy automático. Programación en Python y Java en la carrera.</p>
+            <ul class="etiquetas" role="list"><li class="etiqueta">Figma</li><li class="etiqueta">Git y GitHub</li><li class="etiqueta">Netlify</li><li class="etiqueta">Python</li><li class="etiqueta">Java</li></ul>
+            <p class="tarjeta__pie">Visto en <a href="https://github.com/jeronimoquiroga-byte" target="_blank" rel="noopener noreferrer">GitHub<span class="visualmente-oculto"> (se abre en otra pestaña)</span></a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="seccion" id="proyectos" aria-labelledby="titulo-proyectos">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">02</span>
+          <h2 class="encabezado__titulo" id="titulo-proyectos">Proyectos</h2>
+          <p class="encabezado__bajada">Dos casos de estudio completos, con el problema, el proceso y lo que aprendí, y la serie de ejercicios donde practiqué cada técnica.</p>
+        </header>
+        <div class="grilla grilla--2">
+          <article class="tarjeta proyecto proyecto--destacado">
+            <img class="proyecto__imagen" src="assets/img/proyectos/cubri-960.webp" srcset="assets/img/proyectos/cubri-480.webp 480w, assets/img/proyectos/cubri-960.webp 960w" sizes="(min-width: 1280px) 700px, (min-width: 768px) 90vw, 100vw" width="960" height="600" alt="Paso 2 de Cubrí Seguros: tres planes con su cuota mensual y el resumen de la cotización al costado." loading="lazy" decoding="async">
+            <div class="proyecto__cuerpo">
+              <p class="proyecto__meta">2026 · TP 5 de Diseño UX-UI · Más reciente</p>
+              <h3 class="proyecto__titulo"><a class="proyecto__link" href="casos/cubri-seguros.html">Cubrí Seguros</a></h3>
+              <p class="tarjeta__texto">Cotizador para contratar el seguro de un celular en 4 pasos: equipo, plan, datos y pago simulado, con resumen siempre visible.</p>
+              <p class="proyecto__resultado"><b>Resultado:</b> las cuotas coinciden con los 3 casos de prueba de la cátedra, y el pago rechazado deja reintentar sin perder lo cargado.</p>
+              <ul class="etiquetas" role="list"><li class="etiqueta">Tailwind v4</li><li class="etiqueta">JavaScript</li><li class="etiqueta">Basecoat UI</li></ul>
+              <span class="proyecto__accion">Ver caso de estudio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </article>
+          <article class="tarjeta proyecto">
+            <img class="proyecto__imagen" src="assets/img/proyectos/coffea-960.webp" srcset="assets/img/proyectos/coffea-480.webp 480w, assets/img/proyectos/coffea-960.webp 960w" sizes="(min-width: 1280px) 590px, (min-width: 768px) 45vw, 100vw" width="960" height="600" alt="Portada de Coffea: título en tipografía serif sobre granos de café y una taza con arte latte." loading="lazy" decoding="async">
+            <div class="proyecto__cuerpo">
+              <p class="proyecto__meta">2026 · Landing page</p>
+              <h3 class="proyecto__titulo"><a class="proyecto__link" href="casos/coffea.html">Coffea</a></h3>
+              <p class="tarjeta__texto">Landing de una cafetería de especialidad, con carruseles, favoritos y menú resueltos solo con CSS.</p>
+              <p class="proyecto__resultado"><b>Aprendizaje:</b> separar el CSS en capas y 9 componentes BEM hizo que cada cambio tocara un solo archivo.</p>
+              <ul class="etiquetas" role="list"><li class="etiqueta">CSS3</li><li class="etiqueta">@layer</li><li class="etiqueta">BEM</li><li class="etiqueta">Sin JavaScript</li></ul>
+              <span class="proyecto__accion">Ver caso de estudio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </article>
+          <article class="tarjeta proyecto">
+            <img class="proyecto__imagen" src="assets/img/proyectos/ejercicios-960.webp" srcset="assets/img/proyectos/ejercicios-480.webp 480w, assets/img/proyectos/ejercicios-960.webp 960w" sizes="(min-width: 1280px) 590px, (min-width: 768px) 45vw, 100vw" width="960" height="600" alt="Ejercicio 20, landing integradora: título centrado sobre una foto oscura de una placa electrónica y un botón azul." loading="lazy" decoding="async">
+            <div class="proyecto__cuerpo">
+              <p class="proyecto__meta">2026 · Bloques I a III</p>
+              <h3 class="proyecto__titulo"><a class="proyecto__link" href="https://github.com/jeronimoquiroga-byte/Dise-o_UI-UX" target="_blank" rel="noopener noreferrer">Ejercicios de maquetación<span class="visualmente-oculto"> (repositorio, se abre en otra pestaña)</span></a></h3>
+              <p class="tarjeta__texto">19 ejercicios, desde la estructura HTML y el modelo de caja hasta Grid, animaciones y una landing integradora.</p>
+              <p class="proyecto__resultado"><b>Aprendizaje:</b> menú hamburguesa y formulario de varios pasos sin JavaScript, con <code>:target</code> y <code>:checked</code>.</p>
+              <ul class="etiquetas" role="list"><li class="etiqueta">HTML5</li><li class="etiqueta">Flexbox</li><li class="etiqueta">Grid</li><li class="etiqueta">scroll-snap</li></ul>
+              <span class="proyecto__accion">Ver repositorio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="seccion seccion--alterna" id="experiencia" aria-labelledby="titulo-experiencia">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">03</span>
+          <h2 class="encabezado__titulo" id="titulo-experiencia">Experiencia y formación</h2>
+          <p class="encabezado__bajada">Todavía no trabajé en una empresa. Esto es lo que hice en la carrera, con lo que se puede ver en mis repositorios.</p>
+        </header>
+        <ol class="linea-tiempo" role="list">
+          <li class="hito hito--actual">
+            <p class="hito__periodo">2026 · En curso</p>
+            <h3 class="hito__rol">Licenciatura en Sistemas de Información</h3>
+            <p class="hito__lugar">Facultad de Ciencia y Tecnología, UADER</p>
+            <ul class="hito__logros">
+              <li>Cursando Diseño UX-UI, Programación Orientada a Objetos y Algoritmos y Estructuras de Datos.</li>
+              <li>Todos los trabajos prácticos versionados en repositorios públicos de GitHub.</li>
+            </ul>
+          </li>
+          <li class="hito">
+            <p class="hito__periodo">Sep – Nov 2026</p>
+            <h3 class="hito__rol">Diseño UX-UI · Trabajos prácticos</h3>
+            <p class="hito__lugar">Cátedra de Diseño UX-UI, FCyT UADER</p>
+            <ul class="hito__logros">
+              <li>Entregué 19 ejercicios de maquetación y la landing integradora con scroll-snap.</li>
+              <li>Hice Coffea sin JavaScript y el cotizador Cubrí Seguros con estado centralizado.</li>
+            </ul>
+          </li>
+          <li class="hito">
+            <p class="hito__periodo">2026</p>
+            <h3 class="hito__rol">Algoritmos y Estructuras de Datos · Python</h3>
+            <p class="hito__lugar">FCyT UADER</p>
+            <ul class="hito__logros">
+              <li>Programé pila, cola, lista, árbol, grafo y heap, y los usé en dos parciales.</li>
+              <li>Resolví las guías de recursividad, pilas y colas.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section class="seccion" id="sobre-mi" aria-labelledby="titulo-sobre">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">04</span>
+          <h2 class="encabezado__titulo" id="titulo-sobre">Sobre mí</h2>
+        </header>
+        <div class="sobre">
+          <div class="sobre__texto">
+            <p>Soy Jerónimo, estudio la Licenciatura en Sistemas de Información en la UADER. Me gusta la parte del desarrollo que se ve: que una interfaz se entienda rápido y que el código detrás esté igual de ordenado.</p>
+            <p>Cuando arranco un proyecto, primero defino los tokens y la estructura de archivos, después maqueto mobile-first y al final pruebo con teclado y en tres anchos. Busco un primer lugar donde aprender de un equipo que haga lo mismo, pero mejor.</p>
+          </div>
+          <figure class="sobre__retrato">
+            <img src="assets/img/retrato.svg" width="352" height="352" alt="Ilustración de Jerónimo: las iniciales JQ dibujadas como un plano, con cotas y líneas de construcción." loading="lazy">
+            <figcaption>Retrato en formato plano. Escala 1:1.</figcaption>
+          </figure>
+        </div>
+        <h3 class="visualmente-oculto">Principios de trabajo</h3>
+        <ul class="grilla grilla--2 grilla--3 mt-7" role="list">
+          <li class="tarjeta"><span class="principio__num" aria-hidden="true">A</span><h4 class="tarjeta__titulo">Primero la estructura</h4><p class="tarjeta__texto">Tokens, capas y nombres claros antes de la primera línea de estilo. Lo que está ordenado se puede cambiar sin miedo.</p></li>
+          <li class="tarjeta"><span class="principio__num" aria-hidden="true">B</span><h4 class="tarjeta__titulo">Lo más simple que funcione</h4><p class="tarjeta__texto">Si CSS lo resuelve, no agrego JavaScript. Menos código es menos para mantener y menos para cargar.</p></li>
+          <li class="tarjeta"><span class="principio__num" aria-hidden="true">C</span><h4 class="tarjeta__titulo">Que lo use cualquiera</h4><p class="tarjeta__texto">Contraste, foco visible y teclado en cada entrega. La accesibilidad no se agrega al final.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="seccion seccion--alterna" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">05</span>
+          <h2 class="encabezado__titulo" id="titulo-contacto">Contacto</h2>
+        </header>
+        <div class="contacto">
+          <div class="contacto__texto">
+            <p class="contacto__titulo">¿Buscás a alguien para tu equipo de front-end?</p>
+            <p>Respondo en el día. Escribime por mail o dejame un mensaje con el formulario.</p>
+            <a class="contacto__email" href="mailto:jeronimoquiroga420@gmail.com">jeronimoquiroga420@gmail.com</a>
+            <ul class="contacto__redes" role="list">
+              <li><a class="icono-link" href="https://www.linkedin.com/in/jeronimo-quiroga-a33716441" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zm7 0h3.8v1.5h.06c.53-1 1.84-2.06 3.78-2.06 4.04 0 4.79 2.66 4.79 6.12v5.44h-4v-4.82c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.9h-4z"/></svg>
+                LinkedIn<span class="visualmente-oculto"> (se abre en otra pestaña)</span></a></li>
+              <li><a class="icono-link" href="https://github.com/jeronimoquiroga-byte" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                GitHub<span class="visualmente-oculto"> (se abre en otra pestaña)</span></a></li>
+            </ul>
+          </div>
+          <form class="formulario" name="contacto" method="POST" action="/gracias.html" data-netlify="true" netlify-honeypot="sitio-web">
+            <input type="hidden" name="form-name" value="contacto">
+            <p class="oculto-bot" aria-hidden="true"><label>No completar <input name="sitio-web" tabindex="-1" autocomplete="off"></label></p>
+            <div class="campo">
+              <label class="campo__etiqueta" for="nombre">Nombre</label>
+              <input class="campo__control" id="nombre" name="nombre" type="text" autocomplete="name" required>
+            </div>
+            <div class="campo">
+              <label class="campo__etiqueta" for="email">Email</label>
+              <input class="campo__control" id="email" name="email" type="email" autocomplete="email" required aria-describedby="ayuda-email">
+              <p class="campo__ayuda" id="ayuda-email">Lo uso solo para responderte.</p>
+            </div>
+            <div class="campo">
+              <label class="campo__etiqueta" for="mensaje">Mensaje</label>
+              <textarea class="campo__control" id="mensaje" name="mensaje" required></textarea>
+            </div>
+            <button class="boton" type="submit">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__grilla">
+      <nav class="pie__nav" aria-label="Secciones (pie)">
+        <ul role="list">
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="pie__redes">
+        <a class="icono-link" href="https://github.com/jeronimoquiroga-byte" target="_blank" rel="noopener noreferrer" aria-label="GitHub (se abre en otra pestaña)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+        <a class="icono-link" href="https://www.linkedin.com/in/jeronimo-quiroga-a33716441" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (se abre en otra pestaña)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zm7 0h3.8v1.5h.06c.53-1 1.84-2.06 3.78-2.06 4.04 0 4.79 2.66 4.79 6.12v5.44h-4v-4.82c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.9h-4z"/></svg></a>
+        <a class="icono-link" href="mailto:jeronimoquiroga420@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg></a>
+      </div>
+      <p class="pie__legal">© 2026 Jerónimo Quiroga. Hecho con HTML, CSS y un poco de JavaScript, sin frameworks. Tipografías Space Grotesk y Public Sans. Publicado en Netlify.</p>
+    </div>
+  </footer>
+</body>
+</html>
