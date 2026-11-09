@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; form-action 'self'; base-uri 'self'">
+  <title>Cubrí Seguros · Caso de estudio · Jerónimo Quiroga</title>
+  <meta name="description" content="Caso de estudio de Cubrí Seguros: un cotizador para contratar el seguro de un celular en 4 pasos, con estado centralizado y pago simulado.">
+  <meta name="theme-color" content="#f4f4ef">
+  <link rel="canonical" href="https://jeronimo-quiroga.netlify.app/casos/cubri-seguros.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:url" content="https://jeronimo-quiroga.netlify.app/casos/cubri-seguros.html">
+  <meta property="og:title" content="Cubrí Seguros · Caso de estudio de Jerónimo Quiroga">
+  <meta property="og:description" content="Contratar el seguro de un celular en 4 pasos, sin perder lo cargado si el pago falla.">
+  <meta property="og:image" content="https://jeronimo-quiroga.netlify.app/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portfolio de Jerónimo Quiroga: Front-end y UI">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <div class="contenedor cabecera__barra">
+      <a class="logo" href="../index.html">
+        <svg class="logo__marca" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" fill="#2338c2"/><path d="M1 9h4M1 31h4M35 9h4M35 31h4M9 1v4M31 1v4M9 35v4M31 35v4" stroke="#d7f25c" stroke-width="2"/><text x="20" y="26.5" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16" fill="#fff">JQ</text></svg>
+        <span class="logo__nombre">Jerónimo Quiroga<span class="logo__rol">Front-end y UI</span></span>
+      </a>
+      <a class="boton boton--chico" href="../index.html#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="caso-hero" aria-labelledby="titulo-caso">
+      <div class="contenedor caso-hero__grilla">
+        <a class="volver" href="../index.html#proyectos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Volver a proyectos</a>
+        <p class="kicker">Caso de estudio · 2026</p>
+        <h1 class="caso-hero__titulo" id="titulo-caso">Cubrí Seguros</h1>
+        <p class="caso-hero__bajada">Un cotizador para contratar el seguro de un celular en 4 pasos, sin que un pago rechazado obligue a cargar todo de nuevo.</p>
+        <dl class="ficha">
+          <div><dt>Contexto</dt><dd>TP 5 · Diseño UX-UI</dd></div>
+          <div><dt>Mi rol</dt><dd>Diseño y desarrollo</dd></div>
+          <div><dt>Stack</dt><dd>Tailwind v4 · JS · Basecoat UI</dd></div>
+          <div><dt>Código</dt><dd><a href="https://github.com/jeronimoquiroga-byte/Dise-o_UI-UX/tree/main/TP_5/cubri-seguross" target="_blank" rel="noopener noreferrer">GitHub<span class="visualmente-oculto"> (se abre en otra pestaña)</span></a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="t-problema">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">01</span>
+          <h2 class="encabezado__titulo" id="t-problema">Problema</h2>
+        </header>
+        <div class="caso">
+          <p>La consigna pedía el flujo de contratación de una aseguradora digital: elegir qué proteger, cotizar un celular, elegir un plan, cargar los datos y pagar. La promesa de la marca era <b>“100% digital en menos de 3 minutos”</b>.</p>
+          <p>En un flujo así, la persona abandona cuando no sabe cuánto le falta, cuando no entiende por qué un plan cuesta lo que cuesta o cuando un error la hace empezar de cero.</p>
+          <h3>Qué tenía que resolver</h3>
+          <ul>
+            <li>Mostrar la cuota de los 3 planes apenas se cargan los datos del equipo.</li>
+            <li>Que el resumen de lo elegido esté siempre a la vista.</li>
+            <li>Validar cada campo con un mensaje que diga cómo corregirlo.</li>
+            <li>Si el pago falla, dejar reintentar sin perder nada.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--alterna" aria-labelledby="t-proceso">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">02</span>
+          <h2 class="encabezado__titulo" id="t-proceso">Proceso</h2>
+        </header>
+        <div class="caso">
+          <h3>Un flujo de 6 pantallas</h3>
+          <ol class="pasos">
+            <li><span><b>Inicio:</b> 4 productos. Solo el celular está habilitado; el resto dice “Próximamente” para no prometer lo que no existe.</span></li>
+            <li><span><b>Cotizar:</b> marca, modelo, valor y antigüedad del equipo.</span></li>
+            <li><span><b>Plan:</b> Básico, Plus (recomendado) y Premium, con la cuota calculada.</span></li>
+            <li><span><b>Datos:</b> nombre, DNI, nacimiento, email, celular y términos.</span></li>
+            <li><span><b>Pago:</b> tarjeta, vencimiento, CVV y titular.</span></li>
+            <li><span><b>Resultado:</b> éxito con número de póliza, o error con “Reintentar” y “Cambiar medio de pago”.</span></li>
+          </ol>
+          <h3>Un solo objeto con todo el estado</h3>
+          <p>Toda la solicitud vive en un objeto, <code>solicitud</code>, en <code>estado.js</code>. Cada vez que cambia el paso, <code>render.js</code> vuelve a pintar la pantalla, el stepper y el resumen a partir de ese objeto. Por eso volver atrás o reintentar el pago no borra nada: los datos nunca estuvieron en la pantalla, estuvieron en el estado.</p>
+          <div class="nota">
+            <p><b>Separación de responsabilidades:</b> <code>app.js</code> escucha eventos, <code>render.js</code> pinta, <code>cotizador.js</code> valida y calcula, y <code>pago.js</code> simula la respuesta del banco con una promesa de 1,5 segundos.</p>
+          </div>
+          <h3>La fórmula, verificada</h3>
+          <p>La cuota es <code>valor × tasa anual ÷ 12 × factor de antigüedad</code>, redondeada. El factor es 1 para menos de un año, 1,10 de 1 a 2 años y 1,25 para más de 2. La comprobé con los 3 casos de prueba de la cátedra:</p>
+          <div class="tabla-scroll">
+            <table class="tabla">
+              <caption class="visualmente-oculto">Casos de prueba de la cuota mensual</caption>
+              <thead><tr><th scope="col">Valor y antigüedad</th><th scope="col">Básico</th><th scope="col">Plus</th><th scope="col">Premium</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">$600.000 · menos de 1 año</th><td class="num">$2.000</td><td class="num">$3.000</td><td class="num">$4.500</td></tr>
+                <tr><th scope="row">$600.000 · 1 a 2 años</th><td class="num">$2.200</td><td class="num">$3.300</td><td class="num">$4.950</td></tr>
+                <tr><th scope="row">$1.200.000 · más de 2 años</th><td class="num">$5.000</td><td class="num">$7.500</td><td class="num">$11.250</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="t-solucion">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">03</span>
+          <h2 class="encabezado__titulo" id="t-solucion">Solución</h2>
+        </header>
+        <div class="figuras">
+          <figure class="figura">
+            <img src="../assets/img/proyectos/cubri-paso0-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Pantalla de inicio: “Elegí lo que querés proteger”, con la tarjeta Seguro de Celular habilitada y Hogar, Bici y Viaje marcadas como Próximamente.">
+            <figcaption>Inicio. Lo que todavía no existe se ve, pero deshabilitado.</figcaption>
+          </figure>
+          <figure class="figura">
+            <img src="../assets/img/proyectos/cubri-mobile.webp" width="375" height="800" loading="lazy" decoding="async" alt="La misma pantalla de inicio en un celular, con las tarjetas apiladas en una columna.">
+            <figcaption>Mobile: una columna.</figcaption>
+          </figure>
+        </div>
+        <div class="grilla grilla--2 mt-6">
+          <figure class="figura">
+            <img src="../assets/img/proyectos/cubri-paso1-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Paso 1, cotizar: formulario con marca Samsung, modelo Galaxy A55, valor 600.000 y antigüedad de 1 a 2 años elegida.">
+            <figcaption>Paso 1. “Ver planes” se habilita recién cuando todo es válido.</figcaption>
+          </figure>
+          <figure class="figura">
+            <img src="../assets/img/proyectos/cubri-paso2-1200.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Paso 2, plan: Básico $2.200, Plus $3.300 recomendado y elegido, Premium $4.950, y el resumen de la cotización a la derecha.">
+            <figcaption>Paso 2. El resumen acompaña cada paso en desktop.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--alterna" aria-labelledby="t-resultado">
+      <div class="contenedor">
+        <header class="encabezado">
+          <span class="encabezado__num" aria-hidden="true">04</span>
+          <h2 class="encabezado__titulo" id="t-resultado">Resultado y aprendizajes</h2>
+        </header>
+        <div class="caso">
+          <div class="datos">
+            <div class="dato"><b>6</b><span>pantallas en un solo HTML</span></div>
+            <div class="dato"><b>3/3</b><span>casos de prueba correctos</span></div>
+            <div class="dato"><b>5</b><span>módulos de JavaScript</span></div>
+          </div>
+          <h3>Qué salió bien</h3>
+          <ul>
+            <li>El estado centralizado hizo simple lo que parecía difícil: volver atrás, reintentar el pago y mantener el resumen al día.</li>
+            <li>Los mensajes de error dicen qué hacer (“El valor debe estar entre $100.000 y $2.500.000”), no solo que algo está mal.</li>
+          </ul>
+          <h3>Qué mejoraría</h3>
+          <ul>
+            <li>En mobile el stepper se oculta. Agregaría un “Paso 2 de 4” para que se sepa cuánto falta.</li>
+            <li>Tailwind se carga con el script del navegador, que sirve para un práctico pero no para producción. Lo compilaría con la CLI.</li>
+            <li>Al cambiar de paso movería el foco al título nuevo, para que un lector de pantalla anuncie dónde está.</li>
+          </ul>
+          <a class="siguiente mt-6" href="coffea.html"><span class="kicker">Siguiente caso</span><strong>Coffea →</strong><span>Una landing de cafetería hecha sin JavaScript.</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__grilla">
+      <nav class="pie__nav" aria-label="Secciones (pie)">
+        <ul role="list">
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#proyectos">Proyectos</a></li>
+          <li><a href="../index.html#experiencia">Experiencia</a></li>
+          <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="pie__legal">© 2026 Jerónimo Quiroga. Hecho con HTML, CSS y un poco de JavaScript, sin frameworks.</p>
+    </div>
+  </footer>
+</body>
+</html>
