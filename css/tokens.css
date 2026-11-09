@@ -1,0 +1,101 @@
+/* Design system "Plano": los mismos tokens que en Figma (página 03 · Design system). */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../assets/fonts/space-grotesk-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/space-grotesk-latin-700-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/public-sans-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../assets/fonts/public-sans-latin-600-normal.woff2') format('woff2');
+}
+
+@layer tokens {
+  :root {
+    /* Color · primario y secundario */
+    --color-cobalto: #2338c2;
+    --color-cobalto-hover: #1a2a94;
+    --color-cobalto-activo: #121e6e;
+    --color-cobalto-suave: #e3e7fb;
+    --color-lima: #d7f25c;
+    --color-lima-hover: #c6e23f;
+
+    /* Color · neutros */
+    --color-tinta: #15171f;
+    --color-grafito: #4b5060;
+    --color-linea: #c9cbc2;
+    --color-papel: #f4f4ef;
+    --color-papel-2: #e9eae3;
+    --color-blanco: #ffffff;
+
+    /* Color · estados */
+    --color-exito: #17733f;
+    --color-error: #b3261e;
+    --color-aviso: #8a5300;
+    --color-info: var(--color-cobalto);
+
+    /* Tipografía */
+    --fuente-titulo: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+    --fuente-texto: 'Public Sans', 'Segoe UI', system-ui, sans-serif;
+    --texto-xs: 0.875rem;   /* 14 */
+    --texto-s: 1rem;        /* 16 */
+    --texto-m: 1.125rem;    /* 18 */
+    --texto-l: 1.375rem;    /* 22 */
+    --texto-xl: 1.75rem;    /* 28 */
+    --texto-2xl: 2.25rem;   /* 36 */
+    --texto-3xl: 3rem;      /* 48 */
+    --texto-4xl: 4rem;      /* 64 */
+    --interlineado-titulo: 1.1;
+    --interlineado-texto: 1.6;
+
+    /* Espaciado · múltiplos de 4 */
+    --e-1: 0.25rem;  /* 4 */
+    --e-2: 0.5rem;   /* 8 */
+    --e-3: 0.75rem;  /* 12 */
+    --e-4: 1rem;     /* 16 */
+    --e-5: 1.5rem;   /* 24 */
+    --e-6: 2rem;     /* 32 */
+    --e-7: 3rem;     /* 48 */
+    --e-8: 4rem;     /* 64 */
+    --e-9: 6rem;     /* 96 */
+
+    /* Grilla: 4 columnas (mobile), 8 (tablet) y 12 (desktop) */
+    --ancho-max: 75rem;  /* 1200 */
+    --margen: 1rem;      /* 16 · 24 · 32 según breakpoint */
+    --medianil: 1rem;
+
+    /* Bordes, sombras y movimiento */
+    --borde: 1px solid var(--color-linea);
+    --borde-fuerte: 2px solid var(--color-tinta);
+    --radio: 4px;
+    --sombra-plano: 6px 6px 0 var(--color-cobalto);
+    --altura-cabecera: 4rem;
+    --duracion: 180ms;
+    --curva: cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  @media (min-width: 48em) {
+    :root { --margen: 1.5rem; --medianil: 1.5rem; }
+  }
+  @media (min-width: 80em) {
+    :root { --margen: 2rem; --medianil: 2rem; }
+  }
+}
