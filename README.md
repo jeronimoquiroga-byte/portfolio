@@ -54,7 +54,7 @@ El detalle (proto-persona, benchmark, moodboard, card sorting) está en Figma y 
 
 | Requisito | Resultado | Cómo se comprobó |
 |---|---|---|
-| Lighthouse mobile ≥ 90 | 100 en Performance, Accessibility, Best Practices y SEO | Lighthouse 13 en el inicio y los dos casos |
+| Lighthouse mobile ≥ 90 | 100 en Performance, Accessibility, Best Practices y SEO | Lighthouse 13 sobre la URL publicada |
 | WCAG 2.2 AA | Sin violaciones | axe-core en 5 páginas y 3 anchos |
 | Responsive sin scroll horizontal | 375, 768 y 1280 px | Chrome headless y revisión de capturas |
 | Teclado | Recorrido completo, foco visible y enlace "Saltar al contenido" | Recorrido con Tab |
