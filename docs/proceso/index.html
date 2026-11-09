@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Proceso UX/UI · Portfolio de Jerónimo Quiroga</title>
+<link rel="stylesheet" href="../../css/tokens.css">
+<link rel="stylesheet" href="proceso.css">
+</head>
+<body>
+
+<section class="slide portada" data-hoja="Hoja 01 / 09">
+  <img src="img/retrato.svg" alt="">
+  <p class="kicker">Diseño UX-UI 2026 · Trabajo final</p>
+  <h1>Plano: el portfolio de<br>Jerónimo Quiroga</h1>
+  <p class="lead">Del usuario al sitio publicado. Licenciatura en Sistemas de Información, FCyT UADER.</p>
+  <dl class="rotulo">
+    <div><dt>Sitio</dt><dd>jeronimo-quiroga.netlify.app</dd></div>
+    <div><dt>Repo</dt><dd>github.com/jeronimoquiroga-byte/portfolio</dd></div>
+    <div><dt>Figma</dt><dd>link en el README</dd></div>
+  </dl>
+</section>
+
+<section class="slide" data-hoja="Hoja 02 / 09">
+  <p class="kicker">1 · Usuario</p>
+  <h2>Martín revisa portfolios entre dos code reviews</h2>
+  <div class="cols c3">
+    <div class="caja"><h3>Proto-persona</h3><p>Martín Godoy, 38. Tech lead front-end en una software factory de Paraná. Busca un trainee que escriba HTML y CSS que se pueda mantener.</p><p><b>Le molesta:</b> tecnologías sin pruebas y no encontrar el contacto.</p><p class="nota">Hipótesis: no surge de entrevistas.</p></div>
+    <div class="caja"><h3>Escenario</h3><p>Abre el link desde LinkedIn, en la notebook, entre dos revisiones de código. En 30 segundos decide si abre un repositorio y le escribe, o si cierra la pestaña.</p></div>
+    <div class="caja caja--lima"><h3>Necesita → se resuelve con</h3>
+      <div class="par"><b>¿Qué hace?</b><span>Rol bajo el nombre</span></div>
+      <div class="par"><b>¿Busca lo que ofrezco?</b><span>Insignia</span></div>
+      <div class="par"><b>¿Sabe lo que necesito?</b><span>Rótulo con stack</span></div>
+      <div class="par"><b>¿Es cierto?</b><span>“Visto en” por skill</span></div>
+      <div class="par"><b>¿Cómo lo contacto?</b><span>CTA fijo y email</span></div></div>
+  </div>
+</section>
+
+<section class="slide" data-hoja="Hoja 03 / 09">
+  <p class="kicker">2 · Benchmark</p>
+  <h2>Tres portfolios de front-end</h2>
+  <div class="cols c3">
+    <div class="caja bench"><img src="img/bench-josh.jpg" alt=""><h3>joshwcomeau.com</h3><p><b>Funciona:</b> chips y etiquetas que ordenan la lectura.</p><p><b>No funciona:</b> la portada es un blog; no hay proyectos ni contacto.</p><p class="take">Me llevo: chips para tecnologías.</p></div>
+    <div class="caja bench"><img src="img/bench-sara.jpg" alt=""><h3>sarasoueidan.com</h3><p><b>Funciona:</b> qué hace, en una frase y con foto.</p><p><b>No funciona:</b> mucho texto antes del trabajo; sin email en la portada.</p><p class="take">Me llevo: propuesta en una frase.</p></div>
+    <div class="caja bench"><img src="img/bench-lynn.jpg" alt=""><h3>lynnandtonic.com</h3><p><b>Funciona:</b> índice numerado claro e identidad fuerte.</p><p><b>No funciona:</b> la portada no muestra trabajo.</p><p class="take">Me llevo: navegación numerada.</p></div>
+  </div>
+</section>
+
+<section class="slide" data-hoja="Hoja 04 / 09">
+  <p class="kicker">3 · Concepto</p>
+  <h2>Plano: estructura, medidas y un rótulo</h2>
+  <div class="cols c3">
+    <div class="caja"><h3>Estructurado</h3><p><b>Color:</b> cobalto, tinta de plano.</p><p><b>Tipografía:</b> Space Grotesk, geométrica.</p><p><b>Imagen:</b> grilla de 32 px y el rótulo como ficha.</p></div>
+    <div class="caja"><h3>Preciso</h3><p><b>Color:</b> pocos colores, cada uno con un rol.</p><p><b>Tipografía:</b> escala fija de 14 a 64 px.</p><p><b>Imagen:</b> cotas en el retrato.</p></div>
+    <div class="caja"><h3>Directo</h3><p><b>Color:</b> lima solo para disponibilidad y contacto.</p><p><b>Tipografía:</b> Public Sans, muy legible.</p><p><b>Imagen:</b> capturas reales de proyectos.</p></div>
+  </div>
+  <div class="paleta">
+    <span style="background:#2338c2;color:#fff">Cobalto #2338C2</span><span style="background:#d7f25c">Lima #D7F25C</span><span style="background:#15171f;color:#fff">Tinta #15171F</span><span style="background:#4b5060;color:#fff">Grafito #4B5060</span><span style="background:#e9eae3">Papel 2 #E9EAE3</span><span style="background:#f4f4ef">Papel #F4F4EF</span>
+  </div>
+  <p class="nota">Distinto de la referencia oscura: fondo claro, esquinas casi rectas, sombras duras y numeración visible.</p>
+</section>
+
+<section class="slide" data-hoja="Hoja 05 / 09">
+  <p class="kicker">4 · Arquitectura</p>
+  <h2>Skills antes que Proyectos, pero con pruebas</h2>
+  <div class="cols c2">
+    <div class="caja"><h3>Orden de la página</h3>
+      <ol><li>Header fijo, menú numerado y CTA</li><li>Hero + rótulo “En 30 segundos”</li><li>Métricas</li><li><b>01 Skills</b>, cada una con “Visto en”</li><li><b>02 Proyectos</b> → 2 casos y el repo de ejercicios</li><li>03 Experiencia y formación</li><li>04 Sobre mí + 3 principios</li><li>05 Contacto + formulario</li><li>Footer · 404 aparte</li></ol></div>
+    <div class="caja"><h3>Card sorting del contenido propio</h3>
+      <p>25 tarjetas en 5 preguntas: quién es, qué sabe, qué hizo, de dónde viene y cómo contactarlo.</p>
+      <p><span class="tarj">HTML</span><span class="tarj">CSS</span><span class="tarj">JavaScript</span><span class="tarj tarj--duda">Python</span><span class="tarj tarj--duda">Java</span></p>
+      <p><b>Hallazgo:</b> Python y Java quedaban entre “qué sabe” y “de dónde viene”. Van en “Herramientas y bases” y en la línea de tiempo.</p>
+      <p><b>Decisión:</b> Martín filtra por stack, por eso Skills va primero. Para que no sea una lista vacía, cada skill enlaza al proyecto que la demuestra.</p></div>
+  </div>
+</section>
+
+<section class="slide" data-hoja="Hoja 06 / 09">
+  <p class="kicker">5 · Wireframes</p>
+  <h2>Baja fidelidad, mobile y desktop</h2>
+  <div class="cols c-img">
+    <img class="frame" src="img/wireframes.png" alt="">
+    <div class="caja"><h3>Qué se definió acá</h3>
+      <ul><li>El rótulo pasa debajo del texto en mobile y a la derecha en desktop.</li><li>El proyecto más reciente ocupa todo el ancho.</li><li>Menú hamburguesa por debajo de 1200 px, para que los 5 links entren en una línea.</li><li>En desktop la línea de tiempo lleva el período a la izquierda.</li><li>Las métricas pasan de 2×2 a una fila de 4.</li></ul></div>
+  </div>
+</section>
+
+<section class="slide" data-hoja="Hoja 07 / 09">
+  <p class="kicker">6 · Design system</p>
+  <h2>Los mismos tokens en Figma y en el CSS</h2>
+  <div class="cols c-img">
+    <img class="frame" src="img/ds.png" alt="">
+    <div class="caja"><h3>Qué incluye</h3>
+      <ul><li>Paleta con primario, secundario, neutros y estados. Todo el texto supera 4,5:1 de contraste.</li><li>Escala tipográfica de 7 pasos con 2 familias.</li><li>Espaciado en múltiplos de 4 y grilla de 4, 8 y 12 columnas.</li><li>Botón en 4 estados, tag, insignia, métrica, tarjeta de proyecto, item de timeline e input.</li></ul>
+      <p class="nota">El CSS está ordenado en capas (@layer) con nombres BEM, igual que Coffea.</p></div>
+  </div>
+</section>
+
+<section class="slide" data-hoja="Hoja 08 / 09">
+  <p class="kicker">7 · Alta fidelidad e implementación</p>
+  <h2>Medido, no supuesto</h2>
+  <div class="stats"><div><b>100</b><span>Performance</span></div><div><b>100</b><span>Accessibility</span></div><div><b>100</b><span>Best Practices</span></div><div><b>100</b><span>SEO</span></div></div>
+  <div class="cols c-img">
+    <img class="frame" src="img/hifi.png" alt="">
+    <div class="caja"><h3>Verificado</h3><ul><li>axe-core sin violaciones en 5 páginas y 3 anchos.</li><li>Sin scroll horizontal en 375, 768 y 1280 px.</li><li>Recorrido completo con teclado y foco visible.</li><li>Menú con aria-expanded, aria-controls y Escape.</li></ul><p class="nota">Lighthouse mobile. Repetirlo sobre la URL publicada.</p></div>
+  </div>
+</section>
+
+<section class="slide" data-hoja="Hoja 09 / 09">
+  <p class="kicker">8 · Validación</p>
+  <h2>Test de usabilidad con 4 personas</h2>
+  <div class="stats"><div><b>4</b><span>personas</span></div><div><b>4</b><span>tareas</span></div><div><b>16/16</b><span>logradas sin dudar</span></div><div><b>0</b><span>problemas</span></div></div>
+  <div class="cols c2">
+    <div class="caja">
+      <table>
+        <thead><tr><th>Tarea</th><th>P1</th><th>P2</th><th>P3</th><th>P4</th></tr></thead>
+        <tbody>
+          <tr><td>Decir qué hace y qué busca, tras 30 s</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Encontrar cómo contactarlo</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Abrir el proyecto más reciente</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          <tr><td>Ir a Experiencia con el menú</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+        </tbody>
+      </table>
+      <p class="nota" style="margin-top:10px">✅ sin dudar · ⚠️ dudó · ❌ no lo logró</p></div>
+    <div class="caja caja--lima"><h3>Hallazgos y cambios</h3>
+      <p><b>Quiénes:</b> 4 familiares. Antes del test dijeron que el portfolio está bueno.</p>
+      <p><b>Hallazgos:</b> nadie dudó y nadie señaló algo confuso, así que no hubo cambios.</p>
+      <p><b>Límite:</b> son personas cercanas; falta probarlo con alguien que evalúe perfiles.</p></div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+/* Diapositivas del proceso. Para exportar: abrir index.html en Chrome → Ctrl+P → Guardar como PDF. */
+@page { size: 1280px 720px; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--color-papel-2); color: var(--color-tinta); font-family: var(--fuente-texto); font-size: 20px; line-height: 1.4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.slide { position: relative; display: flex; flex-direction: column; gap: 18px; width: 1280px; height: 720px; padding: 48px 60px; overflow: hidden; background: var(--color-papel); border-bottom: 2px solid var(--color-tinta); break-after: page; }
+.slide:last-child { break-after: auto; }
+.slide::after { content: attr(data-hoja); position: absolute; right: 60px; bottom: 20px; font: 500 14px var(--fuente-titulo); color: var(--color-grafito); }
+h1, h2, h3 { margin: 0; font-family: var(--fuente-titulo); font-weight: 700; line-height: 1.08; }
+h1 { font-size: 72px; }
+h2 { font-size: 40px; padding-bottom: 12px; border-bottom: 2px solid var(--color-tinta); }
+h3 { font-size: 22px; margin-bottom: 8px; }
+p { margin: 0 0 8px; }
+ul, ol { margin: 0; padding-left: 22px; }
+li { margin-bottom: 5px; }
+.kicker { margin: 0; font: 500 15px var(--fuente-titulo); letter-spacing: .08em; text-transform: uppercase; color: var(--color-cobalto); }
+.cols { display: grid; gap: 18px; flex: 1; min-height: 0; }
+.c2 { grid-template-columns: 1fr 1fr; }
+.c3 { grid-template-columns: repeat(3, 1fr); }
+.c-img { grid-template-columns: 7fr 5fr; }
+.caja { padding: 20px; background: var(--color-blanco); border: 2px solid var(--color-tinta); font-size: 18px; }
+.caja--lima { background: var(--color-lima); }
+.caja--tinta { background: var(--color-tinta); color: var(--color-papel); }
+.nota { font-size: 15px; color: var(--color-grafito); margin: 0; }
+.take { margin-top: 8px; padding: 8px 10px; background: var(--color-cobalto-suave); color: var(--color-cobalto-hover); font-weight: 600; }
+.bench img { width: 100%; height: 170px; object-fit: cover; object-position: top; border: 1px solid var(--color-linea); margin-bottom: 10px; display: block; }
+.par { display: flex; gap: 10px; padding: 6px 0; border-bottom: 1px solid rgb(21 23 31 / .2); }
+.par b { flex: 0 0 210px; }
+.portada { justify-content: center; background-color: var(--color-papel); background-image: linear-gradient(to right, rgb(35 56 194 / .09) 1px, transparent 1px), linear-gradient(to bottom, rgb(35 56 194 / .09) 1px, transparent 1px); background-size: 32px 32px; }
+.portada .rotulo { position: absolute; right: 60px; bottom: 60px; width: 420px; background: #fff; border: 2px solid var(--color-tinta); box-shadow: 6px 6px 0 var(--color-cobalto); font-size: 16px; }
+.portada .rotulo div { display: flex; gap: 12px; padding: 8px 14px; border-bottom: 1px solid var(--color-linea); }
+.portada .rotulo div:last-child { border: 0; }
+.portada .rotulo dt { width: 90px; color: var(--color-grafito); }
+.portada .rotulo dd { margin: 0; font-weight: 600; }
+.portada img { position: absolute; right: 60px; top: 48px; width: 220px; border: 2px solid var(--color-tinta); }
+.lead { font-size: 26px; max-width: 700px; }
+.paleta { display: grid; grid-template-columns: repeat(6, 1fr); border: 2px solid var(--color-tinta); font: 500 14px var(--fuente-titulo); }
+.paleta span { padding: 34px 12px 10px; }
+.frame { width: 100%; height: 100%; min-height: 0; object-fit: contain; object-position: top left; background: #fff; border: 2px solid var(--color-tinta); }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 2px solid var(--color-tinta); background: #fff; }
+.stats div { padding: 14px 18px; border-right: 1px solid var(--color-linea); }
+.stats div:last-child { border: 0; }
+.stats b { display: block; font: 700 54px/1 var(--fuente-titulo); color: var(--color-cobalto); }
+.stats span { font-size: 15px; color: var(--color-grafito); }
+table { width: 100%; border-collapse: collapse; background: #fff; font-size: 16px; }
+th, td { padding: 6px 12px; border: 1px solid var(--color-linea); text-align: left; }
+th { background: var(--color-papel-2); }
+td:not(:first-child), th:not(:first-child) { width: 70px; text-align: center; }
+.pendiente { padding: 10px 14px; border: 2px dashed var(--color-aviso); color: var(--color-aviso); background: #fff; font-weight: 600; font-size: 16px; }
+.tarj { display: inline-block; margin: 2px; padding: 2px 8px; border: 1px solid var(--color-grafito); background: var(--color-papel); font-size: 14px; }
+.tarj--duda { background: var(--color-lima); }
