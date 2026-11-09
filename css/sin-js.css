@@ -1,0 +1,7 @@
+/* Solo se carga si JavaScript está desactivado: el menú queda siempre visible. */
+.nav-toggle { display: none; }
+.cabecera__barra { flex-wrap: wrap; padding-block: 0.5rem; }
+.nav { display: block; position: static; width: 100%; padding: 0; border: 0; }
+.nav__lista { display: flex; flex-wrap: wrap; }
+.nav__link { font-size: 1rem; border: 0; }
+.nav__acciones { margin-top: 0.5rem; }
